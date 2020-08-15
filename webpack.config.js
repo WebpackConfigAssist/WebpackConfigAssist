@@ -1,11 +1,12 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, './client/index.js'),
     output: {
         path: path.resolve(__dirname, 'build'),
-        publicPath: '/build/',
+        // publicPath: '/build/',
         filename: 'bundle.js'
     },
     module: {
@@ -35,10 +36,10 @@ module.exports = {
     devServer: {
         // host: 'localhost',
         // port: 8080,
-        // contentBase: path.join(__dirname, 'build/'),
-        // hot: true,
+        contentBase: path.join(__dirname, './client'),
         publicPath: '/build/',
         // historyApiFallback: true,
+        hot: true,
         proxy: {
 			'/api': 'http://localhost:3000'
 		}
