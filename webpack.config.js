@@ -28,7 +28,7 @@ module.exports = {
               },
         ]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    // plugins: [new HtmlWebpackPlugin()],
     mode: process.env.NODE_ENV,
     resolve: {
         extensions: ['.js', '.jsx'],
