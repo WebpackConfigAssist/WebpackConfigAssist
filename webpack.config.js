@@ -7,7 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		// publicPath: '/build/',
-		filename: 'bundle.js'
+		filename: 'bundle.js',
 	},
 	module: {
 		rules: [
@@ -18,15 +18,15 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env', '@babel/preset-react'],
-						plugins: ['@babel/plugin-transform-runtime']
-					}
-				}
+						plugins: ['@babel/plugin-transform-runtime'],
+					},
+				},
 			},
 			{
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader'],
 			},
-		]
+		],
 	},
 	plugins: [new HtmlWebpackPlugin()],
 	mode: process.env.NODE_ENV,
@@ -41,10 +41,7 @@ module.exports = {
 		historyApiFallback: true,
 		hot: true,
 		proxy: {
-			'/api': 'http://localhost:3000'
-		}
+			'/api': 'http://localhost:3000',
+		},
 	},
-
-
-
-}
+};
