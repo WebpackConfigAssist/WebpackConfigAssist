@@ -7,13 +7,6 @@ import About from './About';
 import '../css/App.css';
 import Tutorial from './Tutorial';
 // import Step from './Step';
-
-// new 
-
-// sdfdfadsfsd
-
-// newest
-
 const App = () => {
 
 	const [steps, setSteps] = useState({});
