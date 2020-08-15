@@ -1,0 +1,90 @@
+.App {
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+.nav{
+	padding: 30px;
+	font-size: 24px;
+	width: 100%;
+	border: solid black 1px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.homeContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.optionsContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	margin: 5px;
+}
+
+.installsContainer {
+	border: solid 1px black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+}
+
+.installsContainer div {
+	border: solid 1px black;
+	margin-top: 50px;
+}
+
+.installMessage {
+	padding: 10px;
+}
+
+.installInstruction {
+	padding: 10px;
+}
+
+.installsContainer p {
+	margin-top: 40px;
+}
+
+.tutorialContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mid{
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+}
+
+.midLeft, .midRight {
+	border: solid 1px black;
+	display:flex;
+	justify-content: center;
+	width: 100%;
+}
+
+button {
+	font-size: 24px;
+	padding: 10px;
+	width: 120px;
+	margin: 20px;
+}
+
+.start {
+	display:flex;
+	align-items: center;
+	margin-left: 100px;
+	text-decoration: none;
+}
