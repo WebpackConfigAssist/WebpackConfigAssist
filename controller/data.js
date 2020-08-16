@@ -5,8 +5,7 @@ const dataObj = {};
 dataObj.getAll = (req, res, next) => {
   const queryTest = `SELECT * FROM "public"."webpack" LIMIT 100`;
   db.query(queryTest).then((data) => {
-    console.log('DATA.ROWS');
-    console.log(data.rows);
+   
 
     const obj = {};
     data.rows.forEach((el) => {
