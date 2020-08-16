@@ -13,10 +13,10 @@ const Installs = (props) => {
 		<div className='installsContainer'>
 			<div className='installMessage'>
 				<p>Before we begin the Webpack Config walkthrough, you first have to install your dependencies.</p>
-				<p> To install all of your dependencies at once, navigate to your project folder in your terminal and type or copy and paste the following:</p>
+				<p> To install all of the dependencies you selected, navigate to your project folder in your terminal and copy and paste the following:</p>
 			</div>
 			<div className='installInstruction'>
-				npm install {npms}
+				<code>npm install {npms}</code>
 			</div>
 
 			{/* stretch feature: differentiate between dependencies and dev dependencies
