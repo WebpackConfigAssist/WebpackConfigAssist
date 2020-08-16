@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/App.css';
 import { Link, useHistory } from 'react-router-dom';
 
-const Tutorial = () => {
+const Tutorial = (props) => {
 	const history = useHistory();
 
 	return (
@@ -13,7 +13,7 @@ const Tutorial = () => {
 			</div>
 			<div className='buttonsContainer'>
 				<button onClick={() => history.goBack()}>Go Back</button>
-				<Link to='/tutorial'>
+				<Link to={`/tutorial/${0}`}>
 					<button>Continue</button>
 				</Link>
 			</div>

@@ -2,22 +2,21 @@ import React from 'react';
 import '../css/App.css';
 import { Link, useHistory } from 'react-router-dom';
 
-const Installs = () => {
+const Installs = (props) => {
 	const history = useHistory();
-
-	// const npms = [];
-	// for (let key in props.steps){
-	// 	npms.push(key.npm)
-	// }
+	const npms = [];
+	for (let key in props.steps) {
+		npms.push(props.steps[key].npm + " ")
+	}
 
 	return (
 		<div className='installsContainer'>
 			<div className='installMessage'>
-				<p>Before we begin the Webpack Config walkthrough, be sure to install your dependencies.</p>
-				<p> To do this, navigate to your project folder in your terminal and type:</p>
+				<p>Before we begin the Webpack Config walkthrough, you first have to install your dependencies.</p>
+				<p> To install all of the dependencies you selected, navigate to your project folder in your terminal and copy and paste the following:</p>
 			</div>
 			<div className='installInstruction'>
-				npm install (dependencies)
+				<code>npm install {npms}</code>
 			</div>
 
 			{/* stretch feature: differentiate between dependencies and dev dependencies
