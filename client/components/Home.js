@@ -3,15 +3,14 @@ import '../css/App.css';
 import { Link } from 'react-router-dom';
 
 const Home = (props) => {
-	console.log(props.selected)
 	return (
-		<div>
+		<div className='homeOuterContainer'>
 			<div className='homeMessage'>
 				<p>Tell us about your toolkit. What do you need to build your application?</p>
 			</div>
 			<div className='homeContainer'>
 				<div className='optionsContainer'>
-					<ul>Main Library
+					<ul>Frontend Library
 						<li><input type='radio' name='library' checked={props.selected.noLibrary} onChange={() => props.setSelected({ ...props.selected, noLibrary: (!props.selected.noLibrary), react: false })} /> No Library</li>
 						<li><input type='radio' name='library' onChange={() => props.setSelected({ ...props.selected, noLibrary: false, react: (!props.selected.react) })} /> React</li>
 					</ul>
@@ -31,7 +30,7 @@ const Home = (props) => {
 					</ul>
 				</div>
 				<Link className='start' to='/installs'>
-					<button>Start</button>
+					<button className='startButton'>Start</button>
 				</Link>
 			</div>
 		</div>

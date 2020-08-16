@@ -9,8 +9,9 @@ const Step = (props) => {
 	if (Number(index.id) === props.steps.length) {
 		return (
 			<div className='finalStep'>
-				<div>You have set up your Webpack! Continue to Troubleshoot to fix potential bugs that may arise after setting up Webpack.</div>
+				<div>You have set up your Webpack! Continue to Troubleshoot to fix potential bugs that you may encounter after setting up Webpack.</div>
 				<div>
+					<button onClick={() => history.goBack()}>Go Back</button>
 					<Link to='/troubleshoot'>
 						<button>Troubleshoot</button>
 					</Link>
@@ -23,7 +24,7 @@ const Step = (props) => {
 			<div className='stepContainer'>
 				<div className='mid'>
 					<div className='midLeft'>{props.steps[index.id].description}</div>
-					<div className='midRight'>{props.steps[index.id].code}</div>
+					<div className='midRight'><code>{`function isThisHappening(){ return 'Yes, it is.'}`}</code></div>
 				</div>
 				<div className='buttonsContainer'>
 					<button onClick={() => history.goBack()}>Go Back</button>

@@ -1,15 +1,26 @@
 .App {
 	font-family: Helvetica;
 	font-size: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .nav{
 	padding: 30px;
-	font-size: 24px;
-	width: 100%;
+	font-size: 22px;
+	width: 80%;
 	border: solid black 1px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+.nav .homeAbout{
+	display: flex;
+}
+
+.nav .homeAbout div{
+	margin-left: 20px;
 }
 
 .nav .Link {
@@ -21,12 +32,14 @@
 	padding: 5 px;
 	display: flex;
 	justify-content: center;
-	margin: 20px;
+	margin: 30px;
+	margin-top: 80px;
 }
 
 .homeContainer {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	margin-top: 20px;
 }
 
@@ -34,15 +47,17 @@
 	border: solid black 1px;
 	padding: 10px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: center;
 }
 
 ul {
 	list-style: none;
+	margin: 10px;
 }
 
 li {
-	margin: 5px;
+	margin: 15px;
 }
 
 .aboutContainer{
@@ -83,6 +98,7 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 80%;
 }
 
 .buttonsContainer {
@@ -100,12 +116,13 @@ li {
 	border: solid 1px black;
 	display:flex;
 	justify-content: center;
-	width: 100%;
+	width: 50%;
 }
 
 .stepContainer {
 	display:flex;
 	flex-direction: column;
+	width: 80%;
 }
 
 button {
@@ -118,8 +135,14 @@ button {
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	margin-left: 100px;
 	text-decoration: none;
+	margin: 80px;
+}
+
+.startButton{
+	font-size: 36px;
+	width: 300px;
+	height: 80px;
 }
 
 .tbContainer {
