@@ -1,35 +1,73 @@
 .App {
 	font-family: Helvetica;
 	font-size: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .nav{
 	padding: 30px;
-	font-size: 24px;
-	width: 100%;
+	font-size: 22px;
+	width: 80%;
 	border: solid black 1px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+}
+.nav .homeAbout{
+	display: flex;
+}
+
+.nav .homeAbout div{
+	margin-left: 20px;
+}
+
+.nav .Link {
+	text-decoration: none;
+}
+
+.homeMessage{
+	border: solid black 1px;
+	padding: 5 px;
+	display: flex;
+	justify-content: center;
+	margin: 30px;
+	margin-top: 80px;
 }
 
 .homeContainer {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	margin-top: 20px;
 }
 
 .optionsContainer {
+	border: solid black 1px;
+	padding: 10px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: center;
 }
 
 ul {
 	list-style: none;
+	margin: 10px;
 }
 
 li {
-	margin: 5px;
+	margin: 15px;
 }
+
+.aboutContainer{
+	display: flex;
+	height: 500px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 
 .installsContainer {
 	border: solid 1px black;
@@ -60,6 +98,12 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 80%;
+}
+
+.buttonsContainer {
+	display: flex;
+	justify-content: center;
 }
 
 .mid{
@@ -72,19 +116,49 @@ li {
 	border: solid 1px black;
 	display:flex;
 	justify-content: center;
-	width: 100%;
+	width: 50%;
+}
+
+.stepContainer {
+	display:flex;
+	flex-direction: column;
+	width: 80%;
 }
 
 button {
 	font-size: 24px;
 	padding: 10px;
-	width: 120px;
 	margin: 20px;
 }
 
 .start {
 	display:flex;
 	align-items: center;
-	margin-left: 100px;
+	justify-content: center;
 	text-decoration: none;
+	margin: 80px;
+}
+
+.startButton{
+	font-size: 36px;
+	width: 300px;
+	height: 80px;
+}
+
+.tbContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.finalStep {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.finalStep div, .tbContainer div {
+	margin-top: 70px;
 }
