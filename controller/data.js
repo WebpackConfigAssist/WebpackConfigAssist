@@ -10,7 +10,8 @@ dataObj.getAll = (req, res, next) => {
 			obj[el.name] = {
 				npm: el.npm,
 				code: el.code,
-				description: el.description,
+        description: el.description,
+        require: el.require,
 			};
 		});
 

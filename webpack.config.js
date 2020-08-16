@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	entry: path.resolve(__dirname, './client/index.js'),
@@ -28,7 +29,7 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [new HtmlWebpackPlugin()],
+	plugins: [new HtmlWebpackPlugin(), new MiniCssExtractPlugin()],
 	mode: process.env.NODE_ENV,
 	resolve: {
 		extensions: ['.js', '.jsx'],

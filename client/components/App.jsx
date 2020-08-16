@@ -12,16 +12,16 @@ import Troubleshoot from './Troubleshoot';
 const App = () => {
 
 	const [selected, setSelected] = useState({
-		name1: true,
-		name2: true,
-		noLibrary: false,
-		react: false,
-		bootstrap: false,
+		name1: false,
+		name2: false,
+		noLibrary: true,
+		react: true,
+		bootstrap: true,
 		babel: false,
-		css: false,
-		sass: false,
-		htmlWP: false,
-		miniCssWP: false,
+		css: true,
+		sass: true,
+		htmlWP: true,
+		miniCssWP: true,
 	});
 
 	// const [data, setData] = useState({});
