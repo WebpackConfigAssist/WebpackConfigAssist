@@ -6,6 +6,11 @@ import Troubleshoot from './Troubleshoot'
 const Step = (props) => {
 	const history = useHistory();
 	const index = useParams();
+
+
+	console.log(props.steps[index.id].code)
+	console.log(typeof props.steps[index.id].code)
+
 	if (Number(index.id) === props.steps.length) {
 		return (
 			<div className='finalStep'>
@@ -24,7 +29,13 @@ const Step = (props) => {
 			<div className='stepContainer'>
 				<div className='mid'>
 					<div className='midLeft'>{props.steps[index.id].description}</div>
-					<div className='midRight'><code>{`function isThisHappening(){ return 'Yes, it is.'}`}</code></div>
+					<div className='midRight'>
+						<pre>
+						<code>
+							{props.steps[index.id].code}
+						</code>
+						</pre>
+					</div>
 				</div>
 				<div className='buttonsContainer'>
 					<button onClick={() => history.goBack()}>Go Back</button>
