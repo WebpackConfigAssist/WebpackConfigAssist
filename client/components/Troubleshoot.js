@@ -2,11 +2,11 @@ import React from 'react';
 import '../css/App.css';
 import { Link, useHistory } from 'react-router-dom';
 
-const About = () => {
+const Troubleshoot = () => {
 	const history = useHistory();
 	return (
-		<div className='aboutContainer'>
-			<p>Webpack Config Assistant was created by Burak Caliskan, Kadir Gundogdu, Patrick Mullen and Taylor Du.</p>
+		<div className='tbContainer'>
+			<div>Commonly encountered problems:</div>
 			<div>
 				<button onClick={() => history.goBack()}>Go Back</button>
 			</div>
@@ -15,4 +15,4 @@ const About = () => {
 	)
 }
 
-export default About;
+export default Troubleshoot;

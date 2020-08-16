@@ -12,6 +12,18 @@
 	justify-content: space-around;
 }
 
+.nav .Link {
+	text-decoration: none;
+}
+
+.homeMessage{
+	border: solid black 1px;
+	padding: 5 px;
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
 .homeContainer {
 	display: flex;
 	justify-content: center;
@@ -19,6 +31,8 @@
 }
 
 .optionsContainer {
+	border: solid black 1px;
+	padding: 10px;
 	display: flex;
 	flex-direction: column;
 }
@@ -30,6 +44,15 @@ ul {
 li {
 	margin: 5px;
 }
+
+.aboutContainer{
+	display: flex;
+	height: 500px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 
 .installsContainer {
 	border: solid 1px black;
@@ -62,6 +85,11 @@ li {
 	align-items: center;
 }
 
+.buttonsContainer {
+	display: flex;
+	justify-content: center;
+}
+
 .mid{
 	width: 100%;
 	margin-top: 20px;
@@ -75,16 +103,39 @@ li {
 	width: 100%;
 }
 
+.stepContainer {
+	display:flex;
+	flex-direction: column;
+}
+
 button {
 	font-size: 24px;
 	padding: 10px;
-	width: 120px;
 	margin: 20px;
 }
 
 .start {
 	display:flex;
 	align-items: center;
+	justify-content: center;
 	margin-left: 100px;
 	text-decoration: none;
+}
+
+.tbContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.finalStep {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.finalStep div, .tbContainer div {
+	margin-top: 70px;
 }

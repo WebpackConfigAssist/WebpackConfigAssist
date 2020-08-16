@@ -6,7 +6,7 @@ const Nav = () => {
 	return (
 		<div className='nav'>
 			<div className='logo'>
-				<div>Webpack Config Assistant</div>
+				<Link to='/'><div>Webpack Config Assistant</div></Link>
 			</div>
 			<Link to='/about' className='about'>About</Link>
 		</div>
