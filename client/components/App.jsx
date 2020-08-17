@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect, useMemo, Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../css/App.css';
 import Home from './Home';
@@ -12,8 +12,6 @@ import Troubleshoot from './Troubleshoot';
 const App = () => {
 
 	const [selected, setSelected] = useState({
-		name1: false,
-		name2: false,
 		noLibrary: true,
 		react: false,
 		bootstrap: false,
@@ -25,34 +23,24 @@ const App = () => {
 
 	// const [data, setData] = useState({});
 	const [steps, setSteps] = useState([]);
-
 	const createSteps = () => {
-		fetch('http://localhost:3000/api/')
+		return fetch('http://localhost:3000/api/')
 			.then(data => data.json())
 			.then(data => {
-				// setData(data)
-				// console.log(data);
 				const stepsList = [];
 				for (let key in selected) {
 					if (selected[key] === true) {
 						stepsList.push(data[key])
 					}
 				}
-				// console.log(stepsList)
-				return stepsList;
+				setSteps(stepsList);
 			})
-			.then(returned => {
-				console.log(returned);
-				setSteps(returned);
-				console.log(steps);
-			})
-
 			.catch(err => console.log(err))
 	}
 
 	useEffect(() => {
 		createSteps();
-	}, [])
+	}, [selected])
 
 	return (
 		<Router>
@@ -70,6 +58,7 @@ const App = () => {
 			</div>
 		</Router>
 	)
+
 }
 
 export default App
