@@ -8,6 +8,7 @@ import About from './About';
 import Tutorial from './Tutorial';
 import Step from './Step';
 import Troubleshoot from './Troubleshoot';
+import FinalStep from './FinalStep';
 
 const App = () => {
 
@@ -52,6 +53,7 @@ const App = () => {
 					<Route path='/installs' render={(props) => <Installs {...props} steps={steps} />} />
 					<Route path='/tutorial' exact render={(props) => <Tutorial {...props} steps={steps} />} />
 					<Route path='/tutorial/:id' exact render={(props) => <Step {...props} steps={steps} />} />
+					<Route path='/finalstep' component={FinalStep} />
 					<Route path='/troubleshoot' component={Troubleshoot} />
 					{/* <Route path={`/tutorial/:${steps.length}`} exact component={About} /> */}
 				</Switch>
