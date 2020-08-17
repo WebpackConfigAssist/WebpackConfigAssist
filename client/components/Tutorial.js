@@ -23,7 +23,7 @@ Configuring the output options tells webpack how to write the compiled files. Wh
 					<pre>
 						<code>
 							{
-								`{\n  entry: "./src/index.js", \n  output: {\n    filename: "main.js",\n    path: "path.resolve(__dirname, dist)",\n  } \n}`
+								`module.exports = {\n  entry: "./src/index.js", \n  output: {\n    filename: "main.js",\n    path: path.resolve(__dirname, 'dist'),\n  },  \n  mode: production \n}`
 							}
 						</code>
 					</pre>

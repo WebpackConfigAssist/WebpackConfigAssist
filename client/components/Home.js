@@ -10,25 +10,39 @@ const Home = (props) => {
 			</div>
 			<div className='homeContainer'>
 				<div className='optionsContainer'>
-					<ul>Frontend Library
+					<ul><strong>Frontend Library</strong>
 						<li><input type='radio' name='library' checked={props.selected.noLibrary} onChange={() => props.setSelected({ ...props.selected, noLibrary: (!props.selected.noLibrary), react: false })} /> No Library</li>
 						<li><input type='radio' name='library' checked={props.selected.react} onChange={() => props.setSelected({ ...props.selected, noLibrary: false, react: (!props.selected.react) })} /> React</li>
+						<li><input type='radio' checked={false} readOnly></input>Vue*</li>
+						<li><input type='radio' checked={false} readOnly></input>Svelte*</li>
 					</ul>
-					<ul>UI
+					<ul><strong>Test Framework</strong>
+						<li><input type='checkbox' checked={false} readOnly></input>Jest*</li>
+						<li><input type='checkbox' checked={false} readOnly></input>Mocha*</li>
+						<li><input type='checkbox' checked={false} readOnly></input>Chai*</li>
+					</ul>
+					<ul><strong>UI</strong>
 						<li><input type='checkbox' checked={props.selected.bootstrap} onChange={() => props.setSelected({ ...props.selected, bootstrap: (!props.selected.bootstrap), css: true })} /> Bootstrap</li>
 					</ul>
-					<ul>Transpiler
+					<ul><strong>Transpiler</strong>
 						<li><input type='checkbox' checked={true} readOnly /> Babel</li>
+						<li><input type='checkbox' checked={false} readOnly></input>Typescript*</li>
 					</ul>
-					<ul>Styling
+					<ul><strong>Styling</strong>
 						<li><input type='checkbox' checked={props.selected.css} onChange={() => props.setSelected({ ...props.selected, css: (!props.selected.css) })} /> CSS</li>
 						<li><input type='checkbox' checked={props.selected.sass} onChange={() => props.setSelected({ ...props.selected, sass: (!props.selected.sass) })} /> Sass</li>
+						<li><input type='checkbox' checked={false} readOnly></input>SCSS*</li>
 					</ul>
-					<ul>Webpack Plugins
+					<ul><strong>Linting</strong>
+						<li><input type='checkbox' checked={false} readOnly></input>ESLint*</li>
+						<li><input type='checkbox' checked={false} readOnly></input>Prettier*</li>
+					</ul>
+					<ul><strong>Webpack Plugins</strong>
 						<li><input type='checkbox' checked={props.selected.htmlWP} onChange={() => props.setSelected({ ...props.selected, htmlWP: (!props.selected.htmlWP) })} /> HTML Webpack Plugin</li>
 						<li><input type='checkbox' checked={props.selected.miniCssWP} onChange={() => props.setSelected({ ...props.selected, miniCssWP: (!props.selected.miniCssWP) })} /> MiniCSSExtract Plugin</li>
 					</ul>
 				</div>
+				<p style={{ color: "forestgreen" }}>* denotes dependencies that are not available for selection in the MVP.</p>
 				<Link className='start' to='/installs'>
 					<button className='startButton'>Start</button>
 				</Link>
