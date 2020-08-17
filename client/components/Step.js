@@ -8,8 +8,8 @@ const Step = (props) => {
 	const index = useParams();
 
 
-	console.log(props.steps[index.id].code)
-	console.log(typeof props.steps[index.id].code)
+	// console.log(props.steps[index.id].code)
+	// console.log(typeof props.steps[index.id].code)
 
 	if (Number(index.id) === props.steps.length) {
 		return (
@@ -31,9 +31,9 @@ const Step = (props) => {
 					<div className='midLeft'>{props.steps[index.id].description}</div>
 					<div className='midRight'>
 						<pre>
-						<code>
-							{props.steps[index.id].code}
-						</code>
+							<code>
+								{props.steps[index.id].code}
+							</code>
 						</pre>
 					</div>
 				</div>
