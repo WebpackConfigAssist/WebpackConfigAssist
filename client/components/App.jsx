@@ -32,7 +32,6 @@ const App = () => {
 					if (selected[key] === true) {
 						stepsList.push(data[key])
 					}
-					console.log(stepsList)
 				}
 				setSteps(stepsList);
 			})
