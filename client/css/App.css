@@ -37,6 +37,11 @@
 	color: white;
 }
 
+.about:hover, .home:hover {
+	text-decoration: none;
+	color: black;
+}
+
 .homeMessage{
 	background-color: #74ad5a;
 	color: white;
@@ -157,6 +162,7 @@ li {
 
 button {
 	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	outline: none;
 	/* background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%); */
 	background-color:#74ad5a;
 	border:1px solid #3b6e22;

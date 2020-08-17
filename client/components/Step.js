@@ -17,8 +17,8 @@ const Step = (props) => {
 				<div>You have set up your Webpack! Continue to Troubleshoot to fix potential bugs that you may encounter after setting up Webpack.</div>
 				<div>
 					<button onClick={() => history.goBack()}>Go Back</button>
-					<Link to='/troubleshoot'>
-						<button>Troubleshoot</button>
+					<Link to='/finalstep'>
+						<button>Continue</button>
 					</Link>
 				</div>
 			</div>
