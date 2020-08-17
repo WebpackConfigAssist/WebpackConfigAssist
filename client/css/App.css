@@ -8,12 +8,12 @@
 }
 
 .nav{
-	padding: 30px;
+	padding: 25px;
 	font-size: 22px;
-	width: 80%;
-	border: solid black 1px;
+	width: 100%;
+	border-bottom: solid black 1px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .nav .homeAbout{
 	display: flex;
@@ -79,26 +79,26 @@ li {
 
 .installsContainer div {
 	border: solid 1px black;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .installMessage {
-	padding: 10px;
+	padding: 5px;
 }
 
 .installInstruction {
-	padding: 10px;
+	padding: 15px;
 }
 
 .installsContainer p {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .tutorialContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 80%;
+	width: 90%;
 }
 
 .buttonsContainer {
@@ -107,30 +107,63 @@ li {
 }
 
 .mid{
+	font-size: 18px;
 	width: 100%;
 	margin-top: 20px;
 	display: flex;
 }
 
-.midLeft, .midRight {
+.midLeft {
 	border: solid 1px black;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 50%;
+	width: 45%;
+	padding: 10px;
+}
+
+.midRight {
+	background-color: black;
+	color: lightgray;
+	border: solid 1px black;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 55%;
+	padding: 10px;
 }
 
 .stepContainer {
 	display:flex;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 }
 
+
 button {
-	font-size: 24px;
-	padding: 10px;
-	margin: 20px;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
 }
+button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
 
 .start {
 	display:flex;

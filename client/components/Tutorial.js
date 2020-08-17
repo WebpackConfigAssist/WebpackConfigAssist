@@ -14,7 +14,10 @@ const Tutorial = (props) => {
 	return (
 		<div className='tutorialContainer'>
 			<div className='mid'>
-				<div className='midLeft'>text</div>
+				<div className='midLeft'>Create a webpack.config.js file in your root directory for webpack to use. We will be adding code to this file as we build our webpack configuration. <br /><br />
+				The path module provides utilities for working with file and directory paths, so we will require it here to use in our file. If you are using the HtmlWebpackPlugin or MiniCssExtractPlugin, you will also need to require these modules.<br /><br />
+				We are setting up our webpack configuration for an application or tool with one entry point (./src/index.js).<br /><br />
+Configuring the output options tells webpack how to write the compiled files. While there can be multiple entry points, only one output configuration is specified. The minimum requirement for the output property in a webpack configuration is to set its value to an object and provide an output.filename to use for the output file(s). This configuration will output a single main.js file into the dist directory.</div>
 				<div className='midRight'>
 					<div>{requires}</div>
 					<pre>

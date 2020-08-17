@@ -11,12 +11,14 @@ const Installs = (props) => {
 
 	return (
 		<div className='installsContainer'>
-			<div className='webpackMessage'>
-				<code>npm install webpack webpack-cli </code>
+			<div className='installMessage'>
+				<p>First, install Webpack. Navigate to your project folder in your terminal and copy and paste the following: </p>
+			</div>
+			<div className='installInstruction'>
+				<code>npm install webpack webpack-cli</code>
 			</div>
 			<div className='installMessage'>
-				<p>Before we begin the Webpack Config walkthrough, you first have to install your dependencies.</p>
-				<p> To install all of the dependencies you selected, navigate to your project folder in your terminal and copy and paste the following:</p>
+				<p> To install all of the dependencies you selected, copy and paste the following:</p>
 			</div>
 			<div className='installInstruction'>
 				<code>npm install {npms}</code>
