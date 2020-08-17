@@ -12,21 +12,21 @@ const Home = (props) => {
 				<div className='optionsContainer'>
 					<ul>Frontend Library
 						<li><input type='radio' name='library' checked={props.selected.noLibrary} onChange={() => props.setSelected({ ...props.selected, noLibrary: (!props.selected.noLibrary), react: false })} /> No Library</li>
-						<li><input type='radio' name='library' onChange={() => props.setSelected({ ...props.selected, noLibrary: false, react: (!props.selected.react) })} /> React</li>
+						<li><input type='radio' name='library' checked={props.selected.react} onChange={() => props.setSelected({ ...props.selected, noLibrary: false, react: (!props.selected.react) })} /> React</li>
 					</ul>
 					<ul>UI
-						<li><input type='checkbox' onChange={() => props.setSelected({ ...props.selected, bootstrap: (!props.selected.bootstrap), css: true })} /> Bootstrap</li>
+						<li><input type='checkbox' checked={props.selected.bootstrap} onChange={() => props.setSelected({ ...props.selected, bootstrap: (!props.selected.bootstrap), css: true })} /> Bootstrap</li>
 					</ul>
 					<ul>Transpiler
-						<li><input type='checkbox' value={props.selected.babel} checked={true} readOnly /> Babel</li>
+						<li><input type='checkbox' checked={true} readOnly /> Babel</li>
 					</ul>
 					<ul>Styling
 						<li><input type='checkbox' checked={props.selected.css} onChange={() => props.setSelected({ ...props.selected, css: (!props.selected.css) })} /> CSS</li>
-						<li><input type='checkbox' onChange={() => props.setSelected({ ...props.selected, sass: (!props.selected.sass) })} /> Sass</li>
+						<li><input type='checkbox' checked={props.selected.sass} onChange={() => props.setSelected({ ...props.selected, sass: (!props.selected.sass) })} /> Sass</li>
 					</ul>
 					<ul>Webpack Plugins
-						<li><input type='checkbox' onChange={() => props.setSelected({ ...props.selected, htmlWP: (!props.selected.htmlWP) })} /> HTML Webpack Plugin</li>
-						<li><input type='checkbox' onChange={() => props.setSelected({ ...props.selected, miniCssWP: (!props.selected.miniCssWP) })} /> MiniCSSExtract Plugin</li>
+						<li><input type='checkbox' checked={props.selected.htmlWP} onChange={() => props.setSelected({ ...props.selected, htmlWP: (!props.selected.htmlWP) })} /> HTML Webpack Plugin</li>
+						<li><input type='checkbox' checked={props.selected.miniCssWP} onChange={() => props.setSelected({ ...props.selected, miniCssWP: (!props.selected.miniCssWP) })} /> MiniCSSExtract Plugin</li>
 					</ul>
 				</div>
 				<Link className='start' to='/installs'>

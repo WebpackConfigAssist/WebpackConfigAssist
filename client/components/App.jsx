@@ -15,13 +15,12 @@ const App = () => {
 		name1: false,
 		name2: false,
 		noLibrary: true,
-		react: true,
-		bootstrap: true,
-		babel: false,
-		css: true,
-		sass: true,
-		htmlWP: true,
-		miniCssWP: true,
+		react: false,
+		bootstrap: false,
+		css: false,
+		sass: false,
+		htmlWP: false,
+		miniCssWP: false,
 	});
 
 	// const [data, setData] = useState({});
@@ -32,14 +31,22 @@ const App = () => {
 			.then(data => data.json())
 			.then(data => {
 				// setData(data)
+				// console.log(data);
 				const stepsList = [];
 				for (let key in selected) {
 					if (selected[key] === true) {
 						stepsList.push(data[key])
 					}
 				}
-				setSteps(stepsList)
+				// console.log(stepsList)
+				return stepsList;
 			})
+			.then(returned => {
+				console.log(returned);
+				setSteps(returned);
+				console.log(steps);
+			})
+
 			.catch(err => console.log(err))
 	}
 
