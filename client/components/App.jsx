@@ -10,7 +10,11 @@ import Step from './Step';
 import Troubleshoot from './Troubleshoot';
 import FinalStep from './FinalStep';
 
+// dear iterators, for any questions about the frontend, shoot a slack to Kadir and Burak
+
 const App = () => {
+
+	// creating a state to store in the selections of the client
 
 	const [selected, setSelected] = useState({
 		noLibrary: true,
@@ -22,8 +26,14 @@ const App = () => {
 		miniCssWP: false,
 	});
 
-	// const [data, setData] = useState({});
+	// creating a state to store in the steps that will be generated
+
 	const [steps, setSteps] = useState([]);
+
+	// creating steps by fetching all of the data from the database and then filtering the data into an array
+	// based on which radios and checkboxes were selected (we have this from ... => see Home).
+	// then altering the steps state.
+
 	const createSteps = () => {
 		return fetch('http://localhost:3000/api/')
 			.then(data => data.json())
@@ -38,6 +48,9 @@ const App = () => {
 			})
 			.catch(err => console.log(err))
 	}
+
+	// using the useEffect hook to update the steps, and thus the components,
+	// whenever the state of selected is changed
 
 	useEffect(() => {
 		createSteps();
@@ -55,7 +68,6 @@ const App = () => {
 					<Route path='/tutorial/:id' exact render={(props) => <Step {...props} steps={steps} />} />
 					<Route path='/finalstep' component={FinalStep} />
 					<Route path='/troubleshoot' component={Troubleshoot} />
-					{/* <Route path={`/tutorial/:${steps.length}`} exact component={About} /> */}
 				</Switch>
 			</div>
 		</Router>

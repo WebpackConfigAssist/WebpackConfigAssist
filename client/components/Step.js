@@ -7,9 +7,8 @@ const Step = (props) => {
 	const history = useHistory();
 	const index = useParams();
 
-
-	// console.log(props.steps[index.id].code)
-	// console.log(typeof props.steps[index.id].code)
+	// if the index is out-of-bounds => there is no next step
+	// so don't return the next step, return the finalStep which is a route containing the component FinalStep
 
 	if (Number(index.id) === props.steps.length) {
 		return (
@@ -23,8 +22,14 @@ const Step = (props) => {
 				</div>
 			</div>
 		)
-	} else {
+	}
 
+	// if there is a next index, render this component and provide a link to the step at index + 1;
+
+	// a fantastic stretch feature here would be to render the entire webpack.config.js file dynamically at each step,
+	// based on the selection combination
+
+	else {
 		return (
 			<div className='stepContainer'>
 				<div className='mid'>
